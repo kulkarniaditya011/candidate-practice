@@ -33,6 +33,9 @@ public class Candidate extends AuditEntity {
     @JoinTable(name="position_apply", joinColumns = @JoinColumn(name="candidate_id"), inverseJoinColumns = @JoinColumn(name="pos_id"))
     private List<Position> positions;
 
+    @ManyToOne
+    @JoinColumn(name = "gender_id",nullable = false)
+    private Gender gender;
 
 
 
